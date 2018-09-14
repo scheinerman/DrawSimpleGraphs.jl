@@ -1,8 +1,7 @@
 module DrawSimpleGraphs
-
-using Plots, SimpleGraphs
+using Plots
 
 include("edgeplot.jl")
 
 export example
-end 
+end
