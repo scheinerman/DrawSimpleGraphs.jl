@@ -1,4 +1,3 @@
-gr()
 
 """
 `edgeplot(a,b,c,d)` plots an edge from `(a,b)` to `(c,d)`
@@ -18,6 +17,7 @@ function finish()
 end
 
 function example()
+    gr()
     plot()
     a,b,c,d,e,f = 1,3,2,0,5,5
     edgeplot(a,b,c,d)
