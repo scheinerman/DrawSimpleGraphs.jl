@@ -3,13 +3,13 @@
 `edgeplot(a,b,c,d)` plots an edge from `(a,b)` to `(c,d)`
 """
 function edgeplot(a,b,c,d)
-    Plots.plot!([a,c],[b,d], color="black", linewidth=2)
+    plot!([a,c],[b,d], color="black", linewidth=2)
 end
 
-function nodeplot(a,b)
+function nodeplot(a,b,hue="black", fill="white")
     Plots.plot!([a],[b],marker=5,
-            markercolor="white",
-            markerstrokecolor="black", markerstrokewidth=2)
+            markercolor=fill,
+            markerstrokecolor=hue, markerstrokewidth=2)
 end
 
 function finish()
