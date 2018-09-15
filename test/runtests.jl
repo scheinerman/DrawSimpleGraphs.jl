@@ -1,4 +1,4 @@
-using DrawSimpleGraphs
+using DrawSimpleGraphs, SimpleGraphs
 using Test
 G = RandomTree(12)
 draw(G)
