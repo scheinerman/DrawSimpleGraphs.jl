@@ -1,4 +1,4 @@
-# DrawDrawSimpleGraphs.jl
+# DrawSimpleGraphs
 Drawing functions for `SimpleGraphs`.
 
 
