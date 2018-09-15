@@ -57,4 +57,6 @@ function draw(G::SimpleGraph)
 end
 
 
+include("KnightTourDrawing.jl")
+
 end  # end of module DrawSimpleGraphs

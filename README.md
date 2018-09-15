@@ -72,6 +72,15 @@ versions of this command are provided by `scale`, `rotate`, `translate`, and `re
 * `edge_length(G,uv)` returns the geometric length of the edge `uv`. Note this fails if `G` does not have an embedding.
 `edge_length(G)` returns an array of the edge lengths.
 
+
+## Example: Knight's Tour
+
+The function `KnightTourDrawing(r,c)` to solve the problem
+of finding a knight's tour on an `r`-by-`c` chess board and
+drawing the solution.
+
+
+
 <hr>
 
 ## Notes
