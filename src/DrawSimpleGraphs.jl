@@ -25,10 +25,12 @@ function draw_one_node(x,y,hue="black", fill="white")
 end
 
 function draw_nodes(G::SimpleGraph)
+    hue = get_line_color(G)
+    fill= get_fill_color(G)
     xy = getxy(G)
     for v in vlist(G)
         x,y = xy[v]
-        draw_one_node(x,y)
+        draw_one_node(x,y,hue,fill)
     end
 end
 
@@ -50,4 +52,4 @@ function draw(G::SimpleGraph)
 end
 
 
-end
+end  # end of module DrawSimpleGraphs
