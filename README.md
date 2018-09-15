@@ -72,6 +72,28 @@ versions of this command are provided by `scale`, `rotate`, `translate`, and `re
 * `edge_length(G,uv)` returns the geometric length of the edge `uv`. Note this fails if `G` does not have an embedding.
 `edge_length(G)` returns an array of the edge lengths.
 
+## Vertex Labels
+
+Use `draw_labels(G)` after `draw(G)` to insert vertex names into the drawing.
+Optionally, add a font size, `draw_labels(G,sz)`, to make the labels small
+enough to fit (or use `set_vertex_size` to make larger vertices).
+
+```julia
+julia> G = Cube(3)
+Cube graph Q(3) (n=8, m=12)
+
+julia> embed(G,:combined)
+
+julia> set_vertex_size(G,20)
+
+julia> draw(G)
+
+julia> draw_labels(G)
+```
+
+
+![](cube.png)
+
 
 ## Example: Knight's Tour
 
@@ -87,12 +109,17 @@ Finished
 ![](knight.png)
 
 
+
+
 <hr>
 
 ## Notes
 
 The first time `DrawSimpleGraphs` is used, a slew of warnings is produced.
 I don't understand why.
+
+The first drawings take a very long time to appear. After that, things work
+promptly.
 
 ### To do
 

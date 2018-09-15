@@ -49,6 +49,6 @@ function KnightTourDrawing(r::Int=6, c::Int=6)
             linestyle=:dash)
     end
 
-    plot!(legend=false)
+    finish()
 
 end

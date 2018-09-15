@@ -1,7 +1,7 @@
 module DrawSimpleGraphs
 using Plots, SimpleGraphs
 
-export draw
+export draw, draw_labels
 
 #include("edgeplot.jl")
 
@@ -55,6 +55,21 @@ function draw(G::SimpleGraph)
     draw_nodes(G)
     finish()
 end
+
+
+function draw_labels(G::SimpleGraph, fontsize=8)
+    if !has_embedding(G)
+        embed(G)
+    end
+    xy = getxy(G)
+    for v in G.V
+        x,y = xy[v]
+        annotate!(x,y,string(v),fontsize)
+    end
+    finish()
+end
+
+
 
 
 include("KnightTourDrawing.jl")
