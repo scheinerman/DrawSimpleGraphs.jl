@@ -40,7 +40,11 @@ function finish()
     plot!(legend=false, aspect_ratio=1, axis=false, grid=false)
 end
 
-
+"""
+`draw(G::SimpleGraph)` draws `G` in its current embedding.
+(If `G` does not have an embedding, then it is given a circular
+embedding.)
+"""
 function draw(G::SimpleGraph)
     if !has_embedding(G)
         embed(G)
