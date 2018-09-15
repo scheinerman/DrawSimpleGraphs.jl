@@ -73,6 +73,7 @@ versions of this command are provided by `scale`, `rotate`, `translate`, and `re
 `edge_length(G)` returns an array of the edge lengths.
 
 <hr>
+
 ## Notes
 
 The first time `DrawSimpleGraphs` is used, a slew of warnings is produced.
