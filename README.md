@@ -78,7 +78,13 @@ versions of this command are provided by `scale`, `rotate`, `translate`, and `re
 The function `KnightTourDrawing(r,c)` to solve the problem
 of finding a knight's tour on an `r`-by-`c` chess board and
 drawing the solution.
-
+```julia
+julia> KnightTourDrawing(8,8)
+Searching for a Hamiltonian cycle in an 8-by-8 Knight's move graph
+1374.144891 seconds (9.02 G allocations: 1002.489 GiB, 12.68% gc time)
+Finished
+```
+![](knight.png)
 
 
 <hr>
@@ -91,4 +97,3 @@ I don't understand why.
 ### To do
 
 * Add a function to annotate vertices with their names.
-* Fix `KnightTour`
