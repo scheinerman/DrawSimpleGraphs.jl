@@ -120,7 +120,3 @@ I don't understand why.
 
 The first drawings take a very long time to appear. After that, things work
 promptly.
-
-### To do
-
-* Add a function to annotate vertices with their names.
