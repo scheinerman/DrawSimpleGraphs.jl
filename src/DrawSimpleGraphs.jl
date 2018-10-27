@@ -7,10 +7,6 @@ export draw_labels
 
 # export draw, draw_labels, finish
 
-#
-# function draw_one_edge(a,b,c,d,hue="black")
-#     plot!([a,c],[b,d], color=hue, linewidth=2)
-# end
 
 function draw_one_edge(a,b,c,d,hue="black")
     draw_segment(a,b,c,d,color=hue)
@@ -33,11 +29,6 @@ function draw_one_node(x,y,hue="black", fill="white", node_size=6)
                     markerstrokewidth=2)
 end
 
-# function draw_one_node(x,y,hue="black", fill="white", node_size=6)
-#     plot!([x],[y],markerstrokecolor=hue,
-#                     markercolor=fill, marker=node_size,
-#                     markerstrokewidth=2)
-# end
 
 function draw_nodes(G::SimpleGraph)
     hue = get_line_color(G)
@@ -49,11 +40,7 @@ function draw_nodes(G::SimpleGraph)
         draw_one_node(x,y,hue,fill,node_size)
     end
 end
-#
-#
-# function finish()
-#     plot!(legend=false, aspect_ratio=1, axis=false, grid=false)
-# end
+
 
 """
 `draw(G::SimpleGraph)` draws `G` in its current embedding.
