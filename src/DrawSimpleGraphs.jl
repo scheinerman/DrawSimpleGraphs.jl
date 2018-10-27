@@ -1,11 +1,11 @@
 module DrawSimpleGraphs
+
 using Plots, SimpleGraphs, SimpleDrawing
 
 import SimpleDrawing: draw, finish
-
 export draw_labels
 
-# export draw, draw_labels, finish
+export draw, finish
 
 
 function draw_one_edge(a,b,c,d,hue="black")
