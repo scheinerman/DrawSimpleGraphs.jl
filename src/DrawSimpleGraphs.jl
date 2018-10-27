@@ -22,7 +22,7 @@ function draw_edges(G::SimpleGraph)
     end
 end
 
-function draw_one_node(x,y,hue="black", fill="white", node_size=6))
+function draw_one_node(x,y,hue="black", fill="white", node_size=6)
     draw_point(x,y, markerstrokecolor=hue,
                     markercolor=fill,
                     marker=marker_node_size,
