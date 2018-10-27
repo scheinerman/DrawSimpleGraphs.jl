@@ -5,8 +5,6 @@ Drawing functions for `SimpleGraphs`.
 
 [![Build Status](https://travis-ci.org/scheinerman/DrawSimpleGraphs.jl.svg?branch=master)](https://travis-ci.org/scheinerman/DrawSimpleGraphs.jl)
 
-[![Coverage Status](https://coveralls.io/repos/scheinerman/DrawSimpleGraphs.jl/badge.svg?branch=master&service=github)](https://coveralls.io/github/scheinerman/DrawSimpleGraphs.jl?branch=master)
-
 [![codecov.io](http://codecov.io/github/scheinerman/DrawSimpleGraphs.jl/coverage.svg?branch=master)](http://codecov.io/github/scheinerman/DrawSimpleGraphs.jl?branch=master)
 
 
@@ -14,7 +12,7 @@ Given a `SimpleGraph`, the function `draw(G)` draws `G` in its current embedding
 If the graph does not have an embedding, then it is given a circular embedding.
 
 If further operations on the drawing are desired,
-then `Plots` functions may be used.
+then `Plots` or `SimpleDrawing` functions may be used.
 
 ```julia
 julia> using SimpleGraphs, DrawSimpleGraphs, Plots
@@ -107,16 +105,3 @@ Searching for a Hamiltonian cycle in an 8-by-8 Knight's move graph
 Finished
 ```
 ![](knight.png)
-
-
-
-
-<hr>
-
-## Notes
-
-The first time `DrawSimpleGraphs` is used, a slew of warnings is produced.
-I don't understand why.
-
-The first drawings take a very long time to appear. After that, things work
-promptly.

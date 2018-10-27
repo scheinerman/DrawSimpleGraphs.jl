@@ -1,13 +1,17 @@
 module DrawSimpleGraphs
-using Plots, SimpleGraphs
+using Plots, SimpleGraphs, SimpleDrawing
 
-export draw, draw_labels
+export draw, draw_labels, finish
 
-#include("edgeplot.jl")
+#
+# function draw_one_edge(a,b,c,d,hue="black")
+#     plot!([a,c],[b,d], color=hue, linewidth=2)
+# end
 
 function draw_one_edge(a,b,c,d,hue="black")
-    plot!([a,c],[b,d], color=hue, linewidth=2)
+    draw_segment(a,b,c,d,color=hue)
 end
+
 
 function draw_edges(G::SimpleGraph)
     xy = getxy(G)
@@ -18,11 +22,18 @@ function draw_edges(G::SimpleGraph)
     end
 end
 
-function draw_one_node(x,y,hue="black", fill="white", node_size=6)
-    plot!([x],[y],markerstrokecolor=hue,
-                    markercolor=fill, marker=node_size,
+function draw_one_node(x,y,hue="black", fill="white", node_size=6))
+    draw_point(x,y, markerstrokecolor=hue,
+                    markercolor=fill,
+                    marker=marker_node_size,
                     markerstrokewidth=2)
 end
+
+# function draw_one_node(x,y,hue="black", fill="white", node_size=6)
+#     plot!([x],[y],markerstrokecolor=hue,
+#                     markercolor=fill, marker=node_size,
+#                     markerstrokewidth=2)
+# end
 
 function draw_nodes(G::SimpleGraph)
     hue = get_line_color(G)
@@ -34,11 +45,11 @@ function draw_nodes(G::SimpleGraph)
         draw_one_node(x,y,hue,fill,node_size)
     end
 end
-
-
-function finish()
-    plot!(legend=false, aspect_ratio=1, axis=false, grid=false)
-end
+#
+#
+# function finish()
+#     plot!(legend=false, aspect_ratio=1, axis=false, grid=false)
+# end
 
 """
 `draw(G::SimpleGraph)` draws `G` in its current embedding.
