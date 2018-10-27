@@ -1,7 +1,11 @@
 module DrawSimpleGraphs
 using Plots, SimpleGraphs, SimpleDrawing
 
-export draw, draw_labels, finish
+import SimpleDrawing: draw, finish
+
+export draw_labels
+
+# export draw, draw_labels, finish
 
 #
 # function draw_one_edge(a,b,c,d,hue="black")
@@ -25,7 +29,7 @@ end
 function draw_one_node(x,y,hue="black", fill="white", node_size=6)
     draw_point(x,y, markerstrokecolor=hue,
                     markercolor=fill,
-                    marker=marker_node_size,
+                    marker=node_size,
                     markerstrokewidth=2)
 end
 
