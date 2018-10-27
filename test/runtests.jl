@@ -1,5 +1,5 @@
 using DrawSimpleGraphs, SimpleGraphs
 using Test
 G =  Cycle(12)
-draw(G)
+DrawSimpleGraphs.draw(G)
 @test 1==1
