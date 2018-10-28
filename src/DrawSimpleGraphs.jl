@@ -2,10 +2,10 @@ module DrawSimpleGraphs
 
 using Plots, SimpleGraphs, SimpleDrawing
 
-import SimpleDrawing: draw, finish
+import SimpleDrawing: newdraw, finish
+export newdraw, finish, draw
 export draw_labels
 
-export draw, finish
 
 
 function draw_one_edge(a,b,c,d,hue="black")
@@ -47,7 +47,7 @@ end
 (If `G` does not have an embedding, then it is given a circular
 embedding.)
 """
-function draw(G::SimpleGraph)
+function SimpleDrawing.draw(G::SimpleGraph)
     if !has_embedding(G)
         embed(G)
     end
