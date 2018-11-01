@@ -26,13 +26,13 @@ function draw_one_node(x,y,hue="black", fill="white", node_size=6)
     draw_point(x,y, markerstrokecolor=hue,
                     markercolor=fill,
                     marker=node_size,
-                    markerstrokewidth=2)
+                    markerstrokewidth=1)
 end
 
 
 function draw_nodes(G::SimpleGraph)
     hue = get_line_color(G)
-    fill= get_fill_color(G)
+    fill= get_vertex_color(G)
     node_size = get_vertex_size(G)
     xy = getxy(G)
     for v in vlist(G)
