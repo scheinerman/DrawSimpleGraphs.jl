@@ -6,12 +6,9 @@ import SimpleDrawing: newdraw, finish
 export newdraw, finish, draw
 export draw_labels
 
-
-
 function draw_one_edge(a,b,c,d,hue="black")
     draw_segment(a,b,c,d,color=hue)
 end
-
 
 function draw_edges(G::SimpleGraph)
     xy = getxy(G)
@@ -29,7 +26,6 @@ function draw_one_node(x,y,hue="black", fill="white", node_size=6)
                     markerstrokewidth=1)
 end
 
-
 function draw_nodes(G::SimpleGraph)
     hue = get_line_color(G)
     fill= get_vertex_color(G)
@@ -41,7 +37,6 @@ function draw_nodes(G::SimpleGraph)
     end
 end
 
-
 """
 `draw(G::SimpleGraph)` draws `G` in its current embedding.
 (If `G` does not have an embedding, then it is given a circular
@@ -52,7 +47,7 @@ function SimpleDrawing.draw(G::SimpleGraph)
         embed(G)
     end
     gr()
-    plot()
+    newdraw()
     draw_edges(G)
     draw_nodes(G)
     finish()
