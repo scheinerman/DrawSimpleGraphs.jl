@@ -46,7 +46,6 @@ function SimpleDrawing.draw(G::SimpleGraph)
     if !has_embedding(G)
         embed(G)
     end
-    gr()
     newdraw()
     draw_edges(G)
     draw_nodes(G)
