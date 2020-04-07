@@ -60,12 +60,10 @@ function draw_labels(G::SimpleGraph, fontsize=8)
     xy = getxy(G)
     for v in G.V
         x,y = xy[v]
-        annotate!(x,y,string(v),fontsize)
+        annotate!((x,y,string(v),fontsize))
     end
     finish()
 end
-
-
 
 
 include("KnightTourDrawing.jl")
