@@ -7,7 +7,7 @@ SimpleDrawing = "d78a06e8-ae74-583c-9a07-0d6572347000"
 SimpleGraphs = "55797a34-41de-5266-9ec1-32ac4eb504d3"
 
 [compat]
-julia = "≥ 0.7.0"
+julia = "≥ 1.0.0"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
