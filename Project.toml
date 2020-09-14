@@ -10,7 +10,7 @@ SimpleGraphs = "55797a34-41de-5266-9ec1-32ac4eb504d3"
 [compat]
 julia = "1"
 Plots = "1"
-SimpleDrawing = "0"
+SimpleDrawing = "0.0.1, 0.1, 0.2"
 SimpleGraphs = "0.6"
 
 [extras]
