@@ -32,11 +32,11 @@ end
 
 function draw_nodes(G::SimpleGraph)
     hue = get_line_color(G)
-    fill = get_vertex_color(G)
     node_size = get_vertex_size(G)
     xy = getxy(G)
     for v in vlist(G)
-        x, y = xy[v]
+        x, y = xy[v]    
+        fill = get_vertex_color(G,v)
         draw_one_node(x, y, hue, fill, node_size)
     end
 end
@@ -47,9 +47,7 @@ end
 embedding.)
 """
 function SimpleDrawing.draw(G::SimpleGraph)
-    if !has_embedding(G)
-        embed(G)
-    end
+    ensure_embed(G)
     newdraw()
     draw_edges(G)
     draw_nodes(G)
@@ -58,9 +56,7 @@ end
 
 
 function draw_labels(G::SimpleGraph, fontsize = 8)
-    if !has_embedding(G)
-        embed(G)
-    end
+    ensure_embed(G)
     xy = getxy(G)
     for v in G.V
         x, y = xy[v]
