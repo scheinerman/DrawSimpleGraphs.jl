@@ -3,7 +3,7 @@ Drawing functions for `SimpleGraphs`.
 
 
 
-[![Build Status](https://travis-ci.org/scheinerman/DrawSimpleGraphs.jl.svg?branch=master)](https://travis-ci.org/scheinerman/DrawSimpleGraphs.jl)
+[![Build Status](https://travis-ci.com/scheinerman/DrawSimpleGraphs.jl.svg?branch=master)](https://travis-ci.com/scheinerman/DrawSimpleGraphs.jl)
 
 [![codecov.io](http://codecov.io/github/scheinerman/DrawSimpleGraphs.jl/coverage.svg?branch=master)](http://codecov.io/github/scheinerman/DrawSimpleGraphs.jl?branch=master)
 
