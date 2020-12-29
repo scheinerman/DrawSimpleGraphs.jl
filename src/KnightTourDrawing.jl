@@ -1,20 +1,17 @@
-#using SimpleGraphs, DrawSimpleGraphs, Plots
-
 export KnightTourDrawing
 
 """
 `KnightTourDrawing(r,c)` illustrates a Knight's tour of an r-by-c
-chessboard returning `true` if the tour exists and `false` if not.
+chessboard. Throws an error if no such tour exists.
 """
 function KnightTourDrawing(r::Int = 6, c::Int = 6)
     G = Knight(r, c)
-    println("Searching for a Hamiltonian cycle in an $r-by-$c Knight's move graph")
+    @info "Searching for a Hamiltonian cycle in a $r-by-$c Knight's move graph"
     @time h = hamiltonian_cycle(G)
-    println("Finished")
+    @info "Finished"
 
     if length(h) == 0
-        println("Sorry. This graph is not Hamiltonian")
-        return false
+        throw(error("There is no such Knight's move tour"))
     end
 
     T = eltype(G)
@@ -48,5 +45,4 @@ function KnightTourDrawing(r::Int = 6, c::Int = 6)
     end
 
     finish()
-
 end

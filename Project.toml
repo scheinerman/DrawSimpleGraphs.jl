@@ -1,6 +1,6 @@
 name = "DrawSimpleGraphs"
 uuid = "1d51b185-1a84-59cf-b84e-03b0e3da30b7"
-version = "0.2.4"
+version = "0.2.5"
 
 [deps]
 Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
