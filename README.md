@@ -3,10 +3,6 @@ Drawing functions for `SimpleGraphs`.
 
 
 
-[![Build Status](https://travis-ci.com/scheinerman/DrawSimpleGraphs.jl.svg?branch=master)](https://travis-ci.com/scheinerman/DrawSimpleGraphs.jl)
-
-[![codecov.io](http://codecov.io/github/scheinerman/DrawSimpleGraphs.jl/coverage.svg?branch=master)](http://codecov.io/github/scheinerman/DrawSimpleGraphs.jl?branch=master)
-
 
 Given a `SimpleGraph`, the function `draw(G)` draws `G` in its current embedding.
 If the graph does not have an embedding, then it is given a circular embedding.
@@ -27,6 +23,15 @@ julia> draw(G)
 julia> savefig("four-cube.png")
 ```
 ![](four-cube.png)
+
+
+The `draw` function may be called with an optional second argument: `draw(G,clear_first)`. If called as `draw(G,false)` then the drawing window is not erased prior to drawing. 
+
+### Extra drawing functions
+
+* `draw_nodes(G)` just draws the vertices. 
+* `draw_edges(G)` just draws the edges. 
+
 
 ## Embedding Commands
 
