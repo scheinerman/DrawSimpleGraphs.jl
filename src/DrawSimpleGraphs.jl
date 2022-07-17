@@ -13,7 +13,7 @@ end
     draw_edges(G)
 Draw the edges of `G`.
 """
-function draw_edges(G::SimpleGraph)
+function draw_edges(G::UG)
     xy = getxy(G)
     hue = get_line_color(G)
     for ee in elist(G)
@@ -38,7 +38,7 @@ end
     draw_nodes(G)
 Draw the vertices of `G`.
 """
-function draw_nodes(G::SimpleGraph)
+function draw_nodes(G::UG)
     hue = get_line_color(G)
     node_size = get_vertex_size(G)
     xy = getxy(G)
@@ -59,7 +59,7 @@ embedding.)
 Optional second argument, `clear_first`. If set to `false` the drawing
 window is not erased before drawing the graph. 
 """
-function SimpleDrawing.draw(G::SimpleGraph, clear_first::Bool = true)
+function SimpleDrawing.draw(G::UG, clear_first::Bool = true)
     ensure_embed(G)
     if clear_first
         newdraw()
@@ -70,7 +70,7 @@ function SimpleDrawing.draw(G::SimpleGraph, clear_first::Bool = true)
 end
 
 
-function draw_labels(G::SimpleGraph, fontsize = 8)
+function draw_labels(G::UG, fontsize = 8)
     ensure_embed(G)
     xy = getxy(G)
     for v in G.V

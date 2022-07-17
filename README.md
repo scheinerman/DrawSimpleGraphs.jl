@@ -4,7 +4,7 @@ Drawing functions for `SimpleGraphs`.
 
 
 
-Given a `SimpleGraph`, the function `draw(G)` draws `G` in its current embedding.
+Given an `UndirectedGraph`, the function `draw(G)` draws `G` in its current embedding.
 If the graph does not have an embedding, then it is given a circular embedding.
 
 If further operations on the drawing are desired,

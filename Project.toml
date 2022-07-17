@@ -1,6 +1,6 @@
 name = "DrawSimpleGraphs"
 uuid = "1d51b185-1a84-59cf-b84e-03b0e3da30b7"
-version = "0.2.6"
+version = "0.2.7"
 
 [deps]
 Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
@@ -11,7 +11,7 @@ SimpleGraphs = "55797a34-41de-5266-9ec1-32ac4eb504d3"
 julia = "1"
 Plots = "1"
 SimpleDrawing = "0.0.1, 0.1, 0.2"
-SimpleGraphs = "0.7"
+SimpleGraphs = "0.7, 0.8"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"

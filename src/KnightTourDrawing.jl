@@ -15,7 +15,7 @@ function KnightTourDrawing(r::Int = 6, c::Int = 6)
     end
 
     T = eltype(G)
-    H = SimpleGraph{T}()
+    H = UG{T}()
     for v in G.V
         add!(H, v)
     end
