@@ -10,7 +10,7 @@ If the graph does not have an embedding, then it is given a circular embedding.
 If further operations on the drawing are desired,
 then `Plots` or `SimpleDrawing` functions may be used.
 
-```julia
+```
 julia> using SimpleGraphs, DrawSimpleGraphs, Plots
 
 julia> G = Cube(4)
@@ -26,6 +26,8 @@ julia> savefig("four-cube.png")
 
 
 The `draw` function may be called with an optional second argument: `draw(G,clear_first)`. If called as `draw(G,false)` then the drawing window is not erased prior to drawing. 
+
+Alternatively, `draw!(G)` is equivalent to `draw(G,false)`.
 
 ### Extra drawing functions
 
@@ -81,7 +83,7 @@ Use `draw_labels(G)` after `draw(G)` to insert vertex names into the drawing.
 Optionally, add a font size, `draw_labels(G,sz)`, to make the labels small
 enough to fit (or use `set_vertex_size` to make larger vertices).
 
-```julia
+```
 julia> G = Cube(3)
 Cube graph Q(3) (n=8, m=12)
 
@@ -103,7 +105,7 @@ julia> draw_labels(G)
 The function `KnightTourDrawing(r,c)` to solve the problem
 of finding a knight's tour on an `r`-by-`c` chess board and
 drawing the solution.
-```julia
+```
 julia> KnightTourDrawing(8,8)
 Searching for a Hamiltonian cycle in an 8-by-8 Knight's move graph
 1374.144891 seconds (9.02 G allocations: 1002.489 GiB, 12.68% gc time)

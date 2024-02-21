@@ -2,8 +2,8 @@ module DrawSimpleGraphs
 
 using Plots, SimpleGraphs, SimpleDrawing
 
-import SimpleDrawing: newdraw, finish
-export newdraw, finish, draw, draw_nodes, draw_edges
+import SimpleDrawing: newdraw, finish, draw
+export newdraw, finish, draw, draw!, draw_nodes, draw_edges
 export draw_labels
 
 function draw_one_edge(a, b, c, d, hue = "black")
@@ -52,6 +52,7 @@ end
 
 """
     draw(G)
+    
 Draws `G` in its current embedding.
 (If `G` does not have an embedding, then it is given a circular
 embedding.)
@@ -68,6 +69,15 @@ function SimpleDrawing.draw(G::UG, clear_first::Bool = true)
     draw_nodes(G)
     finish()
 end
+
+"""
+    SimpleDrawing.draw!(G::UG)
+
+Draw the graph `G` but do not erase the screen first. Equivalent 
+to `draw(G,false)`.
+"""
+SimpleDrawing.draw!(G::UG) = draw(G, false)
+
 
 
 function draw_labels(G::UG, fontsize = 8)
