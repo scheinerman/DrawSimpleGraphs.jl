@@ -20,13 +20,13 @@ function dodec_with_ham_cycle()
     xy = getxy(G)
     embed(H, xy)
 
-    set_line_color(G,:blue)
-    set_line_color(H,:red)
+    set_line_color(G, :blue)
+    set_line_color(H, :red)
 
     newdraw()       # ensure a blank canvas
     draw_edges(G)
     draw_edges(H)
-    set_line_color(H,:black)
-    set_vertex_color(H,:black)
+    set_line_color(H, :black)
+    set_vertex_color(H, :black)
     draw_nodes(H)
 end
